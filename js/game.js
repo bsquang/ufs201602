@@ -96,10 +96,14 @@ $(document).ready(function(){
   
   $('.gift').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       winParticle();
+      
+      setTimeout(function(){
+        reload();
+      },nextTime)
   });
   
   $('.btn-reload').bind('click',function(){
-    window.location.reload();
+    reload()
   })
   
   $('.btn-start').click(function(){
@@ -167,22 +171,27 @@ function changePage(current) {
     $('.endtime').hide();
   }
 }
+function reload() {
+  window.location.reload();
+}
 function checkArray() {
   $('#headline').hide();
   $('#here').hide();
   stop_snd(snd_bg);
   if (checkArr== 1) {
     play_snd(7);
-    $('.gift').show();
+    setTimeout(function(){
+      changePage(10);
+    },3000);
     $('.lose').hide();
   }
   else{
     $('.win').hide();
     play_snd(8);
+    setTimeout(function(){
+      reload()
+    },nextTime);
   }
-  setTimeout(function(){
-    window.location.reload();
-  },nextTime);
 }
 
 function countdown(n) {
@@ -251,7 +260,7 @@ function init_game() {
           var vacanh = $(this).parent().find('.vacanh');
           
           if ($(vacanh).hasClass('vacanh_animate')) {
-            console.log('here animate');
+            
             $(vacanh).parent().find('.vacanh_animate').css({'animation-name':'none'});
             setTimeout(function(){
               $(vacanh).parent().find('.vacanh_animate').css({'animation-name':'vacanh'});

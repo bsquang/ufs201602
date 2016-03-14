@@ -582,6 +582,9 @@ animation-name: steam;
 .gift{
     position: absolute;
     left: 400px;
-    bottom: 140px;
-    display: none;
+    bottom: 310px;
+}
+.prize{
+    background: url("../img/new/end/end-BG.png") no-repeat;
+    background-size: cover;
 }
