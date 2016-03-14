@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+      <title>Food Game</title>
+      <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="css/css.css">
+      <link type="text/css" rel="stylesheet" href="css/animate.css">
+      <script src="js/jquery-2.1.4.min.js"></script>
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/jquery.ui.touch-punch.min.js"></script>
+      <script src="js/jquery.simulate.js"></script>
+   </head>
+  <body>
+    <div class="btn-reload"></div>
+    <div class="endtime">
+     <p style="text-align: center"></p>
+    </div>
+    
+    <div style='position: absolute; left: 340px; top: 360px; transform: scale(0.5); z-index: 9;display: none' id='here'>
+     
+    </div>
+    
+    <img id="white-logo" class="wow bounceInDown" src="img/new/logo_white.png"/>
+    <img id="headline" class="wow bounceInDown" src="img/new/headline.png"/>
+    <div style="display: block" class="page startscreen">
+      <div class="btn-start wow pulse infinite">
+      </div>
+      <img id="logo-color" class="wow bounceInDown" style="position: absolute;left: 30px;top: 30px" src="img/new/logo.png" />
+      <img style="position: absolute;left: 110px;top: 125px" src="img/new/game-name.png" />
+      <img id="tag-line" class ="wow bounceInLeft" src="img/new/tag-line.png" />
+      <img id="cheft1" class="cheft wow slideInUp" data-wow-delay="1.5s" src="img/new/chef1.png" />
+      <img id="cheft2" class="cheft wow slideInUp" data-wow-delay="1.2s" src="img/new/chef2.png" />
+      <img id="cheft3" class="cheft wow slideInUp" data-wow-delay=".8s" src="img/new/chef3.png" />
+      <img id="cheft4" class="cheft wow slideInUp" data-wow-delay=".5s" src="img/new/chef4.png" />
+    </div>
+    
+    <div class="page turtorial">
+      <img style="position: absolute;top: 180px;left: 225px" src="img/new/huong-dan-logo.png"/>
+      <img style="position: absolute;top: 30px;left: 30px;" class="wow bounceInDown" src="img/new/logo_white.png"/>
+      <img style="position: absolute;bottom: 125px;left: 170px;" class="wow zoomIn" src="img/new/huong-dan.png"/>
+      <img style="position: absolute;bottom:5px;left:5px;" class="wow slideInLeft" src="img/new/icon_rau-cu-qua.png"/>
+      <img style="position: absolute;top:5px;right:5px;" class="wow slideInRight" src="img/new/icon_rau-cu-qua_top.png"/>
+    </div>
+    
+    <div class="page menu">
+     <img class="wow slideInDown" style="position: absolute;right: 30px;top: 30px;" src="img/new/headline.png" />
+     <img class="wow slideInLeft" style="position: absolute;right: 0;top: 155px;" src="img/new/menu/title.png" />
+     <div class="menu-cate">
+      <div class="left-menu">
+       <img data-item ="5" class="menu-food wow zoomIn" src="img/new/menu/lau-ga.png" />
+       <img data-item ="7" class="menu-food wow zoomIn" src="img/new/menu/lau-thai.png" />
+       <img data-item ="0" class="menu-food wow zoomIn" src="img/new/menu/goi-thap-cam.png" />
+       <img data-item ="4" class="menu-food wow zoomIn" src="img/new/menu/lau-sate-bo.png" />
+      </div>
+      <div class="right-menu">
+       <img data-item ="0" class="menu-food wow zoomIn" src="img/new/menu/lau-trai-cay.png" />
+       <img data-item ="6" class="menu-food wow zoomIn" src="img/new/menu/lau-thap-cam.png" />
+       <img data-item ="0" class="menu-food wow zoomIn" src="img/new/menu/cai-xao.png" />
+       </br>
+       <img data-item ="0" class="menu-food8 wow zoomIn" src="img/new/menu/lau-de.png" />
+      </div>
+     </div>
+    </div>
+    
+    <div class="page game">
+
+      <div class="material canhchua">
+        <img class="true food wow pulse infinite img1" src="img/new/canhchuacaloc/rau-nem.png"/>
+        <img class="false food wow pulse infinite img2" src="img/new/canhchuacaloc/chuoi-chat.png"/>
+        <img class="true food wow pulse infinite img3" src="img/new/canhchuacaloc/thom.png"/>
+        <img class="true food wow pulse infinite img4" src="img/new/canhchuacaloc/gia.png"/>
+        <!--<img class="true food wow pulse infinite img5" " src="img/new/canhchuacaloc/ca.png"/>-->
+        <img class="true food wow pulse infinite img6"  src="img/new/canhchuacaloc/dau-bap.png"/>
+        <img class="false food wow pulse infinite img7"  src="img/new/canhchuacaloc/rieng.png"/>
+        <img class="true food wow pulse infinite img8" src="img/new/canhchuacaloc/bac-ha.png"/>
+        <img class="false food wow pulse infinite img9" src="img/new/canhchuacaloc/gung.png"/>
+        <img class="true food wow pulse infinite img10" src="img/new/canhchuacaloc/toi.png"/>
+        <img class="true food knorr wow pulse infinite img11" src="img/new/canhchuacaloc/nuoc-mam.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>Canh chua cá lóc</p>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+
+      <div class="material laubo">
+        <img class="true food wow pulse infinite img1" src="img/new/laubo/me-rang.png"/>
+        <img class="false food wow pulse infinite img2" src="img/new/laubo/tom.png"/>
+        <img class="true food wow pulse infinite img3" src="img/new/laubo/thit-bo.png"/>
+        <img class="true food knorr wow pulse infinite img4"  src="img/new/laubo/knorr-bo.png"/>
+        <img class="true food wow pulse infinite img5"  src="img/new/laubo/bap-bo.png"/>
+        <img class="false food wow pulse infinite img6"  src="img/new/laubo/ngheu.png"/>
+        <img class="true food wow pulse infinite img7" src="img/new/laubo/hoa-hoi.png"/>
+        <img class="true food wow pulse infinite img8"  src="img/new/laubo/ot.png"/>
+        <img class="true food wow pulse infinite img9"  src="img/new/laubo/gung.png"/>
+        <img class="true food wow pulse infinite img10"  src="img/new/laubo/ca-chua.png"/>
+        <img class="false food wow pulse infinite img11"  src="img/new/laubo/la-chanh.png"/>
+        <img class="true food knorr wow pulse infinite img12"  src="img/new/laubo/knorr-ga.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>Lẩu bò</p>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+
+      <div class="material lauga">
+        <img class="true food wow pulse infinite img1" src="img/new/lauga/rau-tan-o.png"/>
+        <img class="false food wow pulse infinite img2"  src="img/new/lauga/gung.png"/>
+        <img class="true food knorr wow pulse infinite img3" src="img/new/lauga/knorr-bot-ga.png"/>
+        <img class="true food wow pulse infinite img4" src="img/new/lauga/ga.png"/>
+        <img class="true food knorr wow pulse infinite img5" src="img/new/lauga/knorr-ga.png"/>
+        <img class="false food wow pulse infinite img6"  src="img/new/lauga/rau-nem.png"/>
+        <img class="true food wow pulse infinite img7" src="img/new/lauga/la-chanh.png"/>
+        <img class="true food wow pulse infinite img8" src="img/new/lauga/dau-an.png"/>
+        <img class="true food knorr wow pulse infinite img9" src="img/new/lauga/knorr-lime.png"/>
+        <img class="false food wow pulse infinite img10" src="img/new/lauga/ca-chua.png"/>
+        <img class="true food knorr wow pulse infinite img11" src="img/new/lauga/nuoc-mam.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>Lẩu gà</p>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+
+      <div class="material lauhaisan">
+        <img class="true food wow pulse infinite img1" src="img/new/lauhaisan/ngheu.png"/>
+        <img class="true food wow pulse infinite img2" src="img/new/lauhaisan/nam-kim-cham.png"/>
+        <img class="false food wow pulse infinite img3"  src="img/new/lauhaisan/hoa-hoi.png"/>
+        <img class="true food knorr wow pulse infinite img4" src="img/new/lauhaisan/knorr-ga.png"/>
+        <img class="true food wow pulse infinite img5"  src="img/new/lauhaisan/muc.png"/>
+        <img class="true food knorr wow pulse infinite img6" src="img/new/lauhaisan/knorr-hai-san.png"/>
+        <img class="false food wow pulse infinite img7" src="img/new/lauhaisan/dau-den.png"/>
+        <img class="true food wow pulse infinite img8" src="img/new/lauhaisan/tom.png"/>
+        <img class="true food knorr wow pulse infinite img9" src="img/new/lauhaisan/knorr.png"/>
+        <img class="true food wow pulse infinite img10" src="img/new/lauhaisan/nam-dong-co.png"/>
+        <img class="true food knorr wow pulse infinite img11" src="img/new/lauhaisan/nuoc-mam.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>lẩu hải sản</p>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+
+      <div class="material lauthai">
+        <img class="true food wow pulse infinite img1" src="img/new/lauthai/sa-te.png"/>
+        <img class="true food wow pulse infinite img2"  src="img/new/lauthai/sa-cay.png"/>
+        <img class="true food wow pulse infinite img3" src="img/new/lauthai/tom.png"/>
+        <img class="true food wow pulse infinite img4" src="img/new/lauthai/thit-bo.png"/>
+        <img class="false food wow pulse infinite img5" src="img/new/lauthai/gung.png"/>
+        <img class="true food knorr wow pulse infinite img6" src="img/new/lauthai/tom-yam.png"/>
+        <img class="true food wow pulse infinite img7" src="img/new/lauthai/nam.png"/>
+        <img class="true food knorr knorr wow pulse infinite img8" src="img/new/lauthai/knorr-lime.png"/>
+        <img class="false food wow pulse infinite img9" src="img/new/lauthai/tao-tau.png"/>
+        <img class="true food wow pulse infinite img10" src="img/new/lauthai/ngheu.png"/>
+        <img class="true food wow pulse infinite img11" src="img/new/lauthai/ot.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>lẩu thái</p>
+        </div>
+      </div>
+    </div>
+    <div class="page game">
+
+      <div class="material ngheuhapthai">
+        <img class="true food wow pulse infinite img1" src="img/new/ngheuhapthai/ngheu.png"/>
+        <img class="true food wow pulse infinite img2" src="img/new/ngheuhapthai/tuong-ot.png"/>
+        <img class="true food wow pulse infinite img3"  src="img/new/ngheuhapthai/ot-sung.png"/>
+        <img class="false food wow pulse infinite img4" src="img/new/ngheuhapthai/qua-cay.png"/>
+        <img class="true food knorr wow pulse infinite img5" src="img/new/ngheuhapthai/knorr-tom-yam.png"/>
+        <img class="false food wow pulse infinite img6" src="img/new/ngheuhapthai/ca-rot.png"/>
+        <img class="true food wow pulse infinite img7" src="img/new/ngheuhapthai/la-chanh.png"/>
+        <img class="false food wow pulse infinite img8" src="img/new/ngheuhapthai/tieu-xay.png"/>
+        <img class="true food wow pulse infinite img9" src="img/new/ngheuhapthai/sa-cay.png"/>
+        <img class="true food wow pulse infinite img10" src="img/new/ngheuhapthai/tuong-ca.png"/>
+        <img class="true food knorr wow pulse infinite img11" src="img/new/ngheuhapthai/nuoc-mam.png"/>
+        <div class="noicanh">
+          <img class="drop wow bounceIn" src="img/new/noi-ngheu.png"/>
+          <img class="vacanh" src="img/new/va.png"/>
+          <p>Nghêu hấp thái</p>
+        </div>
+      </div>
+    </div>
+    <div class="page endGame">
+     <img style="left: 5px;bottom: 5px;" class="wow slideInLeft" src="img/new/icon_rau-cu-qua.png"/>
+     <img style="right: 5px;top: 0;" class="wow slideInRight" src="img/new/icon_rau-cu-qua_top.png"/>
+     <img style="left: 200px;top: 140px;" class="wow" src="img/new/huong-dan-logo.png"/>
+     <img style="left: 200px;bottom: 150px;" class="wow lose tada" src="img/new/end/lose.png"/>
+     <img style="left: 185px;bottom: 160px;" class="wow win tada" src="img/new/end/win.png"/>
+     <img class="gift wow bounceIn" data-wow-delay="1s" data-wow-duration=".3s" src="img/new/end/qua.png"/>
+    </div>
+    
+    <script src="js/wow.js"></script>
+    <script src="js/clickspark.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+    <script src="js/game.js"></script>
+  </body>
+ </html>

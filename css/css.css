@@ -1,0 +1,587 @@
+@font-face {
+    font-family: gothic;
+    src :url('../font/TradeGothic_Viet_Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: gothic;
+    src :url('../font/TradeGothic_Viet_Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+*,*:before,*:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gothic;
+  font-weight: bold;
+}
+body,html{
+  width: 1024px;
+  height: 768px;
+  position: relative;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+.page{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.startscreen{
+  background: url("../img/new/start_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+.btn-start{
+    width: 162px;
+    height: 162px;
+    position: absolute;
+    left: 302px;
+    background: url("../img/new/button.png");
+    bottom: 264px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#tag-line{
+  position: absolute;
+  bottom: 55px;
+  left: 55px;
+}
+#logo-color{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.cheft{
+  position: absolute;
+  bottom: 0;
+}
+#cheft1{
+  right: 0;
+}
+#cheft2{
+  right: 85px;
+  z-index: 3;
+}
+#cheft3{
+  right: 255px;
+  z-index: 2;
+}
+#cheft4{
+  right: 375px;
+}
+.turtorial{
+  background: url('../img/new/end/end-BG.png') no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.game{
+  background: url('../img/new/game-bg.png') no-repeat;
+  background-size: cover;
+}
+.game .material{
+  width: 85%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.game .material .food{
+  /*width: 120px;*/
+  position: absolute;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+/*-----Canh chua cá lóc----*/
+.canhchua .img1{
+  bottom: 95px;
+  left: 180px;
+}
+.canhchua .img2{
+  bottom: 195px;
+  left: 122px;
+}
+.canhchua .img3{
+  bottom: 315px;
+  left: 122px;
+}
+.canhchua .img4{
+  bottom: 460px;
+  left: 195px;
+}
+.canhchua .img5{
+  bottom: 470px;
+  left: 340px;
+}
+.canhchua .img6{
+  bottom: 470px;
+  left: 560px;
+}
+.canhchua .img7{
+  bottom: 370px;
+  left: 670px;
+  
+}
+.canhchua .img8{
+  bottom: 290px;
+  left: 710px;
+}
+.canhchua .img9{
+  bottom: 180px;
+  left: 710px;
+}
+.canhchua .img10{
+  bottom: 80px;
+  left: 670px;
+}
+.canhchua .img11{
+  bottom: 30px;
+  left: 585px;
+}
+/*-----Lau bo----*/
+.laubo .img1{
+  bottom: 130px;
+  left: 160px;
+}
+.laubo .img2{
+  bottom: 245px;
+  left: 122px;
+}
+.laubo .img3{
+  bottom: 360px;
+  left: 100px;
+}
+.laubo .img4{
+  bottom: 460px;
+  left: 210px;
+}
+.laubo .img5{
+  bottom: 470px;
+  left: 325px;
+}
+.laubo .img6{
+  bottom: 470px;
+  left: 445px;
+}
+.laubo .img7{
+  bottom: 470px;
+  left: 600px;
+  
+}
+.laubo .img8{
+  bottom: 400px;
+  left: 670px;
+}
+.laubo .img9{
+  bottom: 305px;
+  left: 710px;
+}
+.laubo .img10{
+  bottom: 205px;
+  left: 720px;
+}
+.laubo .img11{
+  bottom: 110px;
+  left: 675px;
+}
+.laubo .img12{
+  bottom: 40px;
+  left: 555px;
+}
+
+/*-----Lau ga----*/
+.lauga .img1{
+  bottom: 135px;
+  left: 195px;
+}
+.lauga .img2{
+  bottom: 245px;
+  left: 115px;
+}
+.lauga .img3{
+  bottom: 345px;
+  left: 145px;
+}
+.lauga .img4{
+  bottom: 460px;
+  left: 225px;
+}
+.lauga .img5{
+  bottom: 470px;
+  left: 360px;
+}
+.lauga .img6{
+  bottom: 490px;
+  left: 460px;
+}
+.lauga .img7{
+  bottom: 440px;
+  left: 615px;
+  
+}
+.lauga .img8{
+  bottom: 360px;
+  left: 670px;
+}
+.lauga .img9{
+  bottom: 215px;
+  left: 730px;
+}
+.lauga .img10{
+  bottom: 110px;
+  left: 640px;
+}
+.lauga .img11{
+  bottom: 50px;
+  left: 560px;
+}
+
+/*-----Lau hai san----*/
+.lauhaisan .img1{
+  bottom: 135px;
+  left: 195px;
+}
+.lauhaisan .img2{
+  bottom: 245px;
+  left: 115px;
+}
+.lauhaisan .img3{
+  bottom: 330px;
+  left: 90px;
+}
+.lauhaisan .img4{
+  bottom: 420px;
+  left: 155px;
+}
+.lauhaisan .img5{
+  bottom: 500px;
+  left: 230px;
+}
+.lauhaisan .img6{
+  bottom: 495px;
+  left: 395px;
+}
+.lauhaisan .img7{
+  bottom: 505px;
+  left: 485px;
+  
+}
+.lauhaisan .img8{
+  bottom: 450px;
+  left: 600px;
+}
+.lauhaisan .img9{
+  bottom: 345px;
+  left: 700px;
+}
+.lauhaisan .img10{
+  bottom: 220px;
+  left: 650px;
+}
+.lauhaisan .img11{
+  bottom: 105px;
+  left: 585px;
+}
+
+/*-----Lau thai----*/
+.lauthai .img1{
+  bottom: 135px;
+  left: 170px;
+}
+.lauthai .img2{
+  bottom: 215px;
+  left: 145px;
+}
+.lauthai .img3{
+  bottom: 305px;
+  left: 115px;
+}
+.lauthai .img4{
+  bottom: 460px;
+  left: 130px;
+}
+.lauthai .img5{
+  bottom: 510px;
+  left: 260px;
+}
+.lauthai .img6{
+  bottom: 535px;
+  left: 400px;
+}
+.lauthai .img7{
+  bottom: 510px;
+  left: 510px;
+  
+}
+.lauthai .img8{
+  bottom: 445px;
+  left: 635px;
+}
+.lauthai .img9{
+  bottom: 330px;
+  left: 685px;
+}
+.lauthai .img10{
+  bottom: 215px;
+  left: 645px;
+}
+.lauthai .img11{
+  bottom: 125px;
+  left: 565px;
+}
+
+/*-----Ngheu----*/
+.ngheuhapthai .img1{
+  bottom: 135px;
+  left: 160px;
+}
+.ngheuhapthai .img2{
+  bottom: 270px;
+  left: 155px;
+}
+.ngheuhapthai .img3{
+  bottom: 360px;
+  left: 165px;
+}
+.ngheuhapthai .img4{
+  bottom: 445px;
+  left: 225px;
+}
+.ngheuhapthai .img5{
+  bottom: 470px;
+  left: 360px;
+}
+.ngheuhapthai .img6{
+  bottom: 490px;
+  left: 460px;
+}
+.ngheuhapthai .img7{
+  bottom: 445px;
+  left: 590px;
+  
+}
+.ngheuhapthai .img8{
+  bottom: 360px;
+  left: 610px;
+}
+.ngheuhapthai .img9{
+  bottom: 265px;
+  left: 640px;
+}
+.ngheuhapthai .img10{
+  bottom: 190px;
+  left: 660px;
+}
+.ngheuhapthai .img11{
+  bottom: 70px;
+  left: 585px;
+}
+
+.noicanh{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 287px;
+  height: 320px;
+  transform: translateX(-50%) translateY(-50%);
+}
+.vacanh{
+    position: absolute;
+    top: -15px;
+    right: 25px;
+}
+.noicanh .drop{
+  -webkit-user-drag: none;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  margin-bottom: 5px;
+}
+
+.noicanh p{
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+.endtime{
+  padding: 30px 25px;
+  font-size: 50px;
+  width: 118px;
+  height: 170px;
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+  z-index: 10;
+  color: white;
+  background: url('../img/new/time.png') no-repeat;
+  display: none;
+}
+.btn-reload{
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999999;
+  opacity: 0;
+}
+
+@keyframes flash{
+  0%{
+    box-shadow: none;
+  }
+  50%{
+    box-shadow: 0 0 20px 5px rgba(224,134,0,1);
+  }
+  100%{
+    box-shadow: none;
+  }
+}
+
+.flash{
+  animation: flash 1s linear infinite;
+}
+
+.menu{
+  background: url('../img/new/end/end-BG.png') no-repeat;
+  background-size: cover;
+}
+.menu-cate{
+  position: absolute;
+  left: 230px;
+  bottom: 100px;
+  width: 50%;
+}
+.menu-cate img{
+  margin-bottom: 32px;
+}
+.left-menu{
+  float: left;
+  width: 180px;
+}
+.right-menu{
+  float: right;
+  width: 250px;
+}
+
+#white-logo{
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: none;
+  z-index: 9;
+}
+
+#headline{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+  z-index: 9;
+}
+.endGame{
+  background: url('../img/new/end/end-BG.png') no-repeat;
+  background-size: cover;
+}
+.endGame img{
+  position: absolute;
+}
+
+
+.animatedBSQ {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  
+}
+
+.steam {
+-webkit-animation-name: steam;
+animation-name: steam;
+}
+
+@-webkit-keyframes steam {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0) scale(0.5);
+      transform: translate3d(0, 0, 0) scale(0.5);
+      opacity: 0;
+      z-index: 9;
+    }
+    
+    90% {
+    opacity: 1;
+      -webkit-transform: translate3d(0, -60%, 0) scale(1);
+      transform: translate3d(0, -60%, 0) scale(1);
+      z-index: 9;
+    }
+    
+    100% {
+    opacity: 0;
+      -webkit-transform: translate3d(0, -80%, 0) scale(1);
+      transform: translate3d(0, -80%, 0) scale(1);
+      z-index: 9;
+    }
+}
+.vacanh_animate{
+    animation-name: vacanh;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+}
+@keyframes vacanh{
+    0%{
+        top: -15px;
+        right: 25px;
+    }
+    12.5%{
+        top: -10px;
+        right: 145px;
+    }
+    25%{
+        top: -10px;
+        right: 170px;
+    }
+    37.5%{
+        top: 5px;
+        right: 145px;
+    }
+    50%{
+        top: 8px;
+        right: 135px;
+    }
+    75%{
+        top: 3px;
+        right: 25px;
+    }
+    85%{
+        top: -10px;
+        right: 5px;
+    }
+    100%{
+        top: -15px;
+        right: 25px;
+    }
+}
+
+.gift{
+    position: absolute;
+    left: 400px;
+    bottom: 140px;
+    display: none;
+}
