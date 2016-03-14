@@ -91,6 +91,7 @@ function play_snd(type) {
 }
 
 $(document).ready(function(){
+  FastClick.attach(document.body);
   play_snd_start();
   init_game();
   
