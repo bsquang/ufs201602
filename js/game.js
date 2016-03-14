@@ -253,9 +253,14 @@ function init_game() {
       drop = true;
       if (drop == true) {
         if (!check) {
+          stop_snd(snd_choose_wrong);
+          stop_snd(snd_choose_right);
+          
           play_snd(5);
         }
         else{
+          stop_snd(snd_choose_wrong);
+          stop_snd(snd_choose_right);
           play_snd(4);
           var vacanh = $(this).parent().find('.vacanh');
           
