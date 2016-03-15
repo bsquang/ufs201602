@@ -2,18 +2,7 @@ var check,drop = false;
 var next = 0;
 var countFood;
 var countTrue = 0;
-var arrVoice = [];
-var strSnd = [];
-strSnd[0] = "sound/button_click.mp3";
-arrVoice[0] = new Audio(strSnd[0]);
-strSnd[1] = "sound/true.mp3";
-arrVoice[1] = new Audio(strSnd[1]);
-strSnd[2] = "sound/error.ogg";
-arrVoice[2] = new Audio(strSnd[2]);
-strSnd[3] = "sound/done.mp3";
-arrVoice[3] = new Audio(strSnd[3]);
-strSnd[4] = "sound/fail.mp3";
-arrVoice[4] = new Audio(strSnd[4]);
+
 var clear_interval;
 var time = 40;
 
@@ -21,8 +10,8 @@ var nextTime = 4500;
 
 var checkArr  = 0;
 
-var snd_start = new Audio("sound/cooking_start.mp3");
-var snd_bg = new Audio("sound/cooking_bg.mp3");
+var snd_start = new Audio("sound/BGM03.mp3");
+var snd_bg = new Audio("sound/BGM01.mp3");
 var snd_click = new Audio("sound/button_click.mp3");
 var snd_choose_wrong = new Audio("sound/choose_wrong.mp3");
 var snd_choose_right = new Audio("sound/right.mp3");
@@ -260,8 +249,23 @@ function init_game() {
           stop_snd(snd_choose_wrong);
           stop_snd(snd_choose_right);
           play_snd(4);
-          var vacanh = $(this).parent().find('.vacanh');
           
+          var noi = $(this).parent().find('.drop');
+          
+          if ($(this).hasClass('pulse1')) {
+            $(noi).parents('.noicanh').find('.pulse1').css({'animation-name':'none'});
+            setTimeout(function(){
+              $(noi).parents('.noicanh').find('.pulse1').css({'animation-name':'pulse1'});
+            },100)
+          }
+          else{
+            $(this).addClass('pulse1');
+          }
+          
+          
+          $('.nuoccanh').animate({'opacity':1},1000,'linear')
+          
+          var vacanh = $(this).parent().find('.vacanh');
           if ($(vacanh).hasClass('vacanh_animate')) {
             
             $(vacanh).parent().find('.vacanh_animate').css({'animation-name':'none'});
