@@ -145,7 +145,8 @@ function changePage(current) {
     $('#headline').show();
     $(".endtime").show();
     $(".endtime p").text(time + "s");
-    countFood = $('.game').eq(current - 2).find('.food').length;
+    countFood = $('.game').eq(current - 3).find('.food').length;
+    console.log(current +"++"+countFood)
     countTrue = 0;
     countdown(next);
     
@@ -291,14 +292,14 @@ function init_game() {
             $(obj).fadeOut();
           }
           countTrue +=1;
-          if (next == 3 || next == 4 || next == 5 || next == 8) {
+          if (next == "3" || next == "4" || next == "5" || next == "8") {
             if (countFood - countTrue == 3) {
               clearInterval(clear_interval);
               checkArr = 1;
               changePage(9);
             }
           }
-          else if(next == 6 || next == 7){
+          else if(next == "6" || next == "7"){
             if (countFood - countTrue == 2) {
               clearInterval(clear_interval);
               checkArr = 1;
