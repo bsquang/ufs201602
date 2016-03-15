@@ -285,7 +285,7 @@ function init_game() {
             $("#here").show().append(tempSmoke)
           }
           if ($(obj).hasClass('knorr')) {
-            $(obj).css({'top': '210px','left':'430px','transform':'rotate(-135deg)'});
+            $(obj).css({'top': '210px','left':'430px','transform':'rotate(-135deg)','-webkit-transform':'rotate(-135deg)'});
             $(obj).fadeOut(1000);
           }
           else{
