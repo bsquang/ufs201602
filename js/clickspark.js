@@ -15,11 +15,11 @@ var clickSpark = (function(){
     var $ = jQuery;
     //global default spec
     var csDefaultSpecs = {
-        particleImagePath: 'img/particle-2.png',
-        particleCount: 80,
+        particleImagePath: 'img/13.png',
+        particleCount: 20,
         particleSpeed: 12,
         particleDuration: 600,
-        particleSize: 25,
+        particleSize: 20,
         particleRotationSpeed: 0,
         animationType: 'explosion',
         callback: null

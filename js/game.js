@@ -92,11 +92,15 @@ function play_snd(type) {
 
 $(document).ready(function(){
   FastClick.attach(document.body);
+  
   play_snd_start();
   init_game();
   
   $('.gift').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      winParticle();
+      setTimeout(function(){
+        $('.left-gift').addClass("tuarua");
+        $('.right-gift').addClass("tuarua");
+      },1000)
       
       setTimeout(function(){
         reload();
@@ -127,13 +131,6 @@ $(document).ready(function(){
   })
 })
 
-function winParticle() {
-  clickSpark.fireParticles($('.gift'));
-  
-  setTimeout(function(){
-    winParticle();
-  },500)
-}
 
 function randomID(n) {
   var id = Math.floor(Math.random() * 10) + 0 ;
