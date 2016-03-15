@@ -509,6 +509,10 @@ body,html{
   animation-iteration-count: infinite;
   animation-fill-mode: both;
   
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+  
 }
 
 .steam {
@@ -543,8 +547,48 @@ animation-name: steam;
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: 3;
+    
+    -webkit-animation-name: vacanh;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 3;
 }
 @keyframes vacanh{
+    0%{
+        top: -15px;
+        right: 25px;
+    }
+    12.5%{
+        top: -10px;
+        right: 145px;
+    }
+    25%{
+        top: -10px;
+        right: 170px;
+    }
+    37.5%{
+        top: 5px;
+        right: 145px;
+    }
+    50%{
+        top: 8px;
+        right: 135px;
+    }
+    75%{
+        top: 3px;
+        right: 25px;
+    }
+    85%{
+        top: -10px;
+        right: 5px;
+    }
+    100%{
+        top: -15px;
+        right: 25px;
+    }
+}
+
+@-webkit-keyframes vacanh{
     0%{
         top: -15px;
         right: 25px;
@@ -584,6 +628,7 @@ animation-name: steam;
     animation-duration: .8s;
     animation-iteration-count: infinite;
     animation-play-state: running;
+    
     -webkit-animation-name: tuarua;
     -webkit-animation-duration: .8s;
     -webkit-animation-iteration-count: infinite;
@@ -598,16 +643,17 @@ animation-name: steam;
 
 .pulse1{
     animation-name: pulse1;
-    animation-duration: .8s;
+    animation-duration: 0.8s;
     animation-timing-function: linear;
     animation-iteration-count: 3;
+    
     -webkit-animation-name: pulse1;
-    -webkit-animation-duration: .8s;
+    -webkit-animation-duration: 0.8s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: 3;
 }
 
-@keyframes pulse1{
+@keyframes pulse1 {
     0%{
         transform: scale(1);
         -webkit-transform: scale(1);

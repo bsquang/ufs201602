@@ -207,7 +207,7 @@ function init_game() {
     start: function(){
       var ctop = $(this).height() / 2;
       var cleft = $(this).width() / 2;
-      $(this).css({'animation-name':'none'});
+      $(this).css({'-webkit-animation-name':'none'});
       // Getter
       var cursorAt = $(this).draggable( "option", "cursorAt" );
        
@@ -227,7 +227,7 @@ function init_game() {
     stop: function(event,ui){
        $(this).css({'opacity':'1'});
        //$(this).addClass('pulse infinite');
-       $(this).css({'animation-name':'pulse'});
+       $(this).css({'-webkit-animation-name':'pulse'});
        if (drop == false) {
           bstop = false;
        }
@@ -254,9 +254,9 @@ function init_game() {
           var noi = $(this).parent().find('.drop');
           
           if ($(this).hasClass('pulse1')) {
-            $(noi).parents('.noicanh').find('.pulse1').css({'animation-name':'none'});
+            $(noi).parents('.noicanh').find('.pulse1').css({'-webkit-animation-name':'none'});
             setTimeout(function(){
-              $(noi).parents('.noicanh').find('.pulse1').css({'animation-name':'pulse1'});
+              $(noi).parents('.noicanh').find('.pulse1').css({'-webkit-animation-name':'pulse1'});
             },100)
           }
           else{
@@ -269,9 +269,9 @@ function init_game() {
           var vacanh = $(this).parent().find('.vacanh');
           if ($(vacanh).hasClass('vacanh_animate')) {
             
-            $(vacanh).parent().find('.vacanh_animate').css({'animation-name':'none'});
+            $(vacanh).parent().find('.vacanh_animate').css({'-webkit-animation-name':'none'});
             setTimeout(function(){
-              $(vacanh).parent().find('.vacanh_animate').css({'animation-name':'vacanh'});
+              $(vacanh).parent().find('.vacanh_animate').css({'-webkit-animation-name':'vacanh'});
             },100)
           }
           else{
@@ -279,8 +279,8 @@ function init_game() {
           }
           var obj = ui.draggable;
           // 15 count
-          for(var i=0;i<8;i++){
-            var tempSmoke = "<img class='steam animatedBSQ' src='img/new/smoke.png' style='position: absolute; left:  "+getRandomInt(0,300)+"px; top: "+getRandomInt(0,50)+"px; animation-delay: "+getRandomInt(0,200)/100+"s'>";
+          for(var i=0;i<3;i++){
+            var tempSmoke = "<img class='steam animatedBSQ' src='img/new/smoke.png' style='position: absolute; left:  "+getRandomInt(0,300)+"px; top: "+getRandomInt(0,50)+"px; animation-delay: "+getRandomInt(0,200)/100+"s;-webkit-animation-delay: "+getRandomInt(0,200)/100+"s'>";
             
             $("#here").show().append(tempSmoke)
           }
