@@ -100,7 +100,7 @@ $(document).ready(function(){
     reload()
   })
   
-  $('.btn-start').click(function(){
+  $('.btn-start').bind("click touchDown", function(){
     play_snd(3);
     changePage(1);
     next +=1;
