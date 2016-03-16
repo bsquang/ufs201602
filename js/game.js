@@ -96,17 +96,17 @@ $(document).ready(function(){
       },nextTime)
   });
   
-  $('.btn-reload').bind('click touchend',function(){
+  $('.btn-reload').bind('touchend',function(){
     reload()
   })
   
-  $('.btn-start').bind('click touchend', function(){
+  $('.btn-start').bind('touchend', function(){
     play_snd(3);
     changePage(1);
     next +=1;
   })
   
-  $('.menu-food').bind('click touchend', function(){
+  $('.menu-food').bind('touchend', function(){
     var id = $(this).attr('data-item');
     if (id !== '0') {
       play_snd(3);
